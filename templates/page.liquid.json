@@ -121,7 +121,6 @@
     },
     "7ef2afd3-4ab4-4270-97d2-fe8200faaf89": {
       "type": "custom-liquid",
-      "disabled": true,
       "settings": {
         "custom_liquid": "{{\"hello world\" | capitalize}}",
         "color_scheme": "",
