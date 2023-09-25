@@ -7,10 +7,65 @@
         "padding_bottom": 28
       }
     },
+    "81ffa250-c3d0-4679-a9c9-11aa90c716f4": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21128787722558__81ffa250-c3d0-4679-a9c9-11aa90c716f4-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Object",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--21128787722558__81ffa250-c3d0-4679-a9c9-11aa90c716f4-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "d11f68cb-429e-483b-a860-108ddf8a1d44": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{{}}",
+        "custom_liquid": "{{page.title}}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "8c8396cd-7abd-45ce-8f12-d9bbd09ebdbf": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21128787722558__8c8396cd-7abd-45ce-8f12-d9bbd09ebdbf-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Tag",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--21128787722558__8c8396cd-7abd-45ce-8f12-d9bbd09ebdbf-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "09604fff-6fe0-40ea-84f5-6585354c8307": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% if page.title == \"Liquid\"%}\nYes, the title is Liquid\n{% endif %}",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -19,6 +74,9 @@
   },
   "order": [
     "main",
-    "d11f68cb-429e-483b-a860-108ddf8a1d44"
+    "81ffa250-c3d0-4679-a9c9-11aa90c716f4",
+    "d11f68cb-429e-483b-a860-108ddf8a1d44",
+    "8c8396cd-7abd-45ce-8f12-d9bbd09ebdbf",
+    "09604fff-6fe0-40ea-84f5-6585354c8307"
   ]
 }
