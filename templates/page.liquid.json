@@ -71,6 +71,24 @@
         "padding_bottom": 52
       }
     },
+    "a4956782-6c22-4ece-a5cb-7eb5c6b56f94": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% if page.title == \"Contact\"%}\nMy email is fab@gmail.com\n{% elsif page.title==\"Liquid\"%}\nIt's a test page\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "38940753-d690-4815-89f5-5ae05369039d": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% unless page.title == \"liquid\"%}\nthis is {{page.title}}\n{%endunless%}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "2f08a447-4251-418a-b8d1-8094237b2141": {
       "type": "rich-text",
       "blocks": {
@@ -110,6 +128,8 @@
     "d11f68cb-429e-483b-a860-108ddf8a1d44",
     "8c8396cd-7abd-45ce-8f12-d9bbd09ebdbf",
     "09604fff-6fe0-40ea-84f5-6585354c8307",
+    "a4956782-6c22-4ece-a5cb-7eb5c6b56f94",
+    "38940753-d690-4815-89f5-5ae05369039d",
     "2f08a447-4251-418a-b8d1-8094237b2141",
     "7ef2afd3-4ab4-4270-97d2-fe8200faaf89"
   ]
