@@ -1,20 +1,96 @@
-<h1>This is liquid</h1>
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}
+    px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}
+    px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}
+      px;
+      padding-bottom: {{ section.settings.padding_bottom }}
+      px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="page-width">
+
+  <div class="twcss-w-full  twcss-rounded-md twcss-overflow-hidden twcss-mt-10">
+    <div class="twcss-bg-gray-400 twcss-w-full twcss-h-[50rem] twcss-flex twcss-items-center twcss-justify-center twcss-relative">
+      <div class=" twcss-absolute twcss-inset-0 twcss-bg-cover twcss-bg-center twcss-bg-no-repeat twcss-filter twcss-filter-grayscale ">
+        <img
+          src="{{section.settings.Liquid-bg-image | img_url:'master'}}"
+          alt="Background Image"
+          class="twcss-w-full twcss-h-full twcss-object-cover" />
+      </div>
+      <div class="twcss-absolute twcss-bg-black/30 twcss-w-full twcss-h-full">&nbsp;</div>
+      <h1 class="twcss-text-center twcss-z-50 twcss-text-white">hello world</h1>
+    </div>
+
+
+  </div>
+
+  <h1>{{ section.settings.Liquid-ref }}</h1>
+
+
+  {% if section.settings.Liquid-checkbox == true %}
+    <h2>Check box is Checked</h2>
+  {% else %}
+    Check box is not Checked
+  {% endif %}
+
+  {% assign liquidColor = section.settings.Liquid-color %}
+
+  <h2 style="color: {{ liquidColor | escape }}">the color chosen is {{ liquidColor }}</h2>
+
+  {% if section.settings.Liquid-number > 0 %}
+    <h2>the number is {{ section.settings.Liquid-number }}</h2>
+  {% endif %}
+</div>
 
 {% schema %}
-{
-  "name": "Liquid Reference",
-  "settings": [
-    {
-      "id": "Liquid-ref",
-      "type": "text",
-      "label": "A reference for Shopify Liquid"
-    }
-  ],
-  "presets": [
-    {
-      "name": "Liquid Reference",
-      "category": "Reference"
-    }
-  ]
-}
+  {
+    "name": "Liquid Reference",
+    "settings": [
+      {
+        "id": "Liquid-ref",
+        "type": "text",
+        "label": "A reference for Shopify Liquid"
+      },
+      {
+        "id": "Liquid-checkbox",
+        "type": "checkbox",
+        "label": "A reference for Shopify Liquid"
+      },
+      {
+        "id": "Liquid-collections",
+        "type": "collection",
+        "label": "A collections for Shopify Liquid"
+      },
+      {
+        "id": "Liquid-color",
+        "type": "color",
+        "label": "A color for Shopify Liquid"
+      }, {
+        "id": "Liquid-number",
+        "type": "number",
+        "label": "A number for Shopify Liquid"
+      }, {
+        "id": "Liquid-bg-image",
+        "type": "image_picker",
+        "label": "Background Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Liquid Reference",
+        "category": "Reference"
+      }
+    ]
+  }
 {% endschema %}
